@@ -13,7 +13,7 @@ data class MovieResult(
     val genreIds: List<Int?>?,
 
     @SerializedName("id")
-    val id: Int?,
+    val id: Int,
 
     @SerializedName("original_language")
     val originalLanguage: String?,
@@ -34,13 +34,13 @@ data class MovieResult(
     val releaseDate: String?,
 
     @SerializedName("title")
-    val title: String?,
+    val title: String,
 
     @SerializedName("video")
     val video: Boolean?,
 
     @SerializedName("vote_average")
-    val voteAverage: Double?,
+    val voteAverage: Double,
 
     @SerializedName("vote_count")
     val voteCount: Int?
