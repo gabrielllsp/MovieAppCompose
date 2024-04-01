@@ -7,8 +7,8 @@ import br.com.movieapp.movie_popular_feature.domain.source.MoviePopularRemoteDat
 import javax.inject.Inject
 
 class MoviePopularRemoteDataSourceImpl @Inject constructor(
-    private val service: MovieService
-): MoviePopularRemoteDataSource {
+    private val service: MovieService,
+) : MoviePopularRemoteDataSource {
     override fun getPopularMoviePagingSource(): MoviePagingSource {
         return MoviePagingSource(this)
     }
