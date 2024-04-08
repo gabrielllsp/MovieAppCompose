@@ -50,6 +50,12 @@ object NetworkModule {
             .build()
     }
 
+    @Provides
+    fun provideGsonConverterFactory(): GsonConverterFactory{
+        return GsonConverterFactory.create()
+    }
+
+    @Provides
     fun provideMovieService(
         client: OkHttpClient,
         converterFactory: GsonConverterFactory,

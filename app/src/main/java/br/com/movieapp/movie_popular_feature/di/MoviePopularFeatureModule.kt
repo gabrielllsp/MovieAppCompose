@@ -22,6 +22,8 @@ object MoviePopularFeatureModule {
     fun provideMovieDataSource(service: MovieService): MoviePopularRemoteDataSource{
         return MoviePopularRemoteDataSourceImpl(service = service)
     }
+
+
     @Provides
     @Singleton
     fun provideMovieRepository(remoteDataSource: MoviePopularRemoteDataSource): MoviePopularRepository{
