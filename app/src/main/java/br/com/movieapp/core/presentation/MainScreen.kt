@@ -19,5 +19,4 @@ fun MainScreen(navController: NavHostController) {
             NavigationGraph(navController = navController)
         }
     )
-
 }

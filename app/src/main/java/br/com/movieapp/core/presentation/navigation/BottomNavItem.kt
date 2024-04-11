@@ -9,7 +9,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 sealed class BottomNavItem(val title: String, val icon: ImageVector, val route: String) {
 
     object MoviePopular : BottomNavItem(
-        title = "Filmes Populares",
+        title = "Filmes",
         icon = Icons.Default.Movie,
         route = "movie_popular_screen"
     )

@@ -25,14 +25,14 @@ fun BottomNavigationBar(
     
     BottomNavigation(
         contentColor = yellow,
-        backgroundColor = black
+        backgroundColor = black,
     ) {
         val navBackStackEntry by navController.currentBackStackEntryAsState()
         val currentRoute = navBackStackEntry?.destination?.route
         
         items.forEach { destination ->
             BottomNavigationItem(
-                selected =currentRoute == destination.route,
+                selected = currentRoute == destination.route,
                 onClick = { 
                           navController.navigate(destination.route){
                               launchSingleTop = true
