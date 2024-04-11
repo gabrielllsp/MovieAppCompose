@@ -13,7 +13,7 @@ data class SearchResult(
     val genreIds: List<Int?>?,
 
     @SerializedName("id")
-    val id: Int?,
+    val id: Int,
 
     @SerializedName("original_language")
     val originalLanguage: String?,
@@ -28,7 +28,7 @@ data class SearchResult(
     val popularity: Double?,
 
     @SerializedName("poster_path")
-    val posterPath: String?,
+    val posterPath: String,
 
     @SerializedName("release_date")
     val releaseDate: String?,
@@ -40,7 +40,7 @@ data class SearchResult(
     val video: Boolean?,
 
     @SerializedName("vote_average")
-    val voteAverage: Double?,
+    val voteAverage: Double,
 
     @SerializedName("vote_count")
     val voteCount: Int?
