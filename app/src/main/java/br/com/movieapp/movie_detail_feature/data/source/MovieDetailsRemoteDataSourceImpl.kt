@@ -8,7 +8,7 @@ import br.com.movieapp.core.util.toBackdropUrl
 import br.com.movieapp.movie_detail_feature.domain.source.MovieDetailsRemoteDataSource
 import javax.inject.Inject
 
-class MovieDetailRemoteDataSourceImpl @Inject constructor(
+class MovieDetailsRemoteDataSourceImpl @Inject constructor(
     private val service: MovieService
 ) : MovieDetailsRemoteDataSource {
 
