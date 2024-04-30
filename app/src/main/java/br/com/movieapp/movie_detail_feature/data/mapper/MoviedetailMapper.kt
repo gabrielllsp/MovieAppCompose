@@ -7,7 +7,6 @@ fun MovieDetails.toMovie(): Movie{
     return Movie(
         id = id,
         title = title,
-        imageUrl = backdropPathUrl.toString(),
-        voteAverage = voteAverage
-    )
+        voteAverage = voteAverage,
+        imageUrl = backdropPathUrl.toString())
 }

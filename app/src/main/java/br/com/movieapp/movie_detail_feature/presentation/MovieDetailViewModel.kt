@@ -21,7 +21,7 @@ class MovieDetailViewModel @Inject constructor(
     var uiState by mutableStateOf(MovieDetailState())
         private set
 
-    fun getMovieDetail(getMovieDetail: MovieDetailEvent) {
+    fun getMovieDetail(getMovieDetail: MovieDetailEvent.GetMovieDetail) {
         event(getMovieDetail)
     }
 
@@ -35,6 +35,12 @@ class MovieDetailViewModel @Inject constructor(
                         )
                     ).collect { resultData ->
                         when (resultData) {
+
+                            is ResultData.Loading -> {
+                                uiState = uiState.copy(
+                                    isLoading = true
+                                )
+                            }
                             is ResultData.Success -> {
                                 uiState = uiState.copy(
                                     isLoading = false,
@@ -51,12 +57,6 @@ class MovieDetailViewModel @Inject constructor(
                                 UtilFunctions.logError(
                                     "DETAIL-ERROR",
                                     resultData.e?.message.toString()
-                                )
-                            }
-
-                            is ResultData.Loading -> {
-                                uiState = uiState.copy(
-                                    isLoading = true
                                 )
                             }
                         }

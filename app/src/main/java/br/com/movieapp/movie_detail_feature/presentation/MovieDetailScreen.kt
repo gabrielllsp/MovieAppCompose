@@ -17,15 +17,15 @@ import br.com.movieapp.ui.theme.white
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun MovieDetailScreen(
-    id: Int?,
+    movieId: Int? = 0,
     uiState: MovieDetailState,
     getMovieDetail: (MovieDetailEvent.GetMovieDetail) -> Unit
 ) {
     val pagingMoviesSimilar = uiState.results.collectAsLazyPagingItems()
 
     LaunchedEffect(key1 = true) {
-        if (id != null){
-            getMovieDetail(MovieDetailEvent.GetMovieDetail(id))
+        movieId?.let {
+            getMovieDetail(MovieDetailEvent.GetMovieDetail(it))
         }
     }
 
@@ -44,10 +44,10 @@ fun MovieDetailScreen(
                 pagingMoviesSimilar = pagingMoviesSimilar,
                 isLoading = uiState.isLoading,
                 isError = uiState.error,
-                iconColor = uiState.iconColor
-            ) {
-                
-            }
+                iconColor = uiState.iconColor,
+                onAddFavorite = {}
+            )
+
         }
     )
 }

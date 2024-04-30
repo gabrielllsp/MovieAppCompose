@@ -20,7 +20,7 @@ object MovieDetailsModule {
     @Provides
     @Singleton
     fun provideMovieDetailsDataSource(service:MovieService):MovieDetailsRemoteDataSource{
-        return MovieDetailsRemoteDataSourceImpl(service)
+        return MovieDetailsRemoteDataSourceImpl(service = service)
     }
 
     @Provides

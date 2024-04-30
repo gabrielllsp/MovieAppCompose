@@ -25,7 +25,7 @@ fun MovieDetailBackdropImage(
                 .error(R.drawable.ic_error_image)
                 .placeholder(R.drawable.ic_placeholder)
                 .build(),
-            contentDescription = "",
+            contentDescription = null,
             contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxWidth()
 

@@ -18,10 +18,10 @@ class MovieDetailsRemoteDataSourceImpl @Inject constructor(
         return MovieDetails(
             id = response.id,
             title = response.title,
-            overview = response.overview,
             genres = genres,
-            releaseDate = response.releaseDate,
+            overview = response.overview,
             backdropPathUrl = response.backdropPath.toBackdropUrl(),
+            releaseDate = response.releaseDate,
             voteAverage = response.voteAverage,
             duration = response.runtime,
             voteCount = response.voteCount

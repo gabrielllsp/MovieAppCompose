@@ -66,7 +66,7 @@ fun NavigationGraph(navController: NavHostController) {
             val uiState = viewModel.uiState
             val getMovieDetail = viewModel::getMovieDetail
             MovieDetailScreen(
-                id = it.arguments?.getInt(Constants.MOVIE_DETAIL_ARGUMENT_KEY),
+                movieId = it.arguments?.getInt(Constants.MOVIE_DETAIL_ARGUMENT_KEY),
                 uiState = uiState,
                 getMovieDetail = getMovieDetail
             )

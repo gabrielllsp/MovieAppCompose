@@ -34,6 +34,6 @@ sealed class BottomNavItem(val title: String, val icon: ImageVector, val route: 
         "{$MOVIE_DETAIL_ARGUMENT_KEY}"
     ){
         fun passMovieId(movieId: Int) =
-            "movie_detail_destination?$MOVIE_DETAIL_ARGUMENT_KEY = $movieId"
+            "movie_detail_destination?$MOVIE_DETAIL_ARGUMENT_KEY=$movieId"
     }
 }
